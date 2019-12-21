@@ -1,0 +1,13 @@
+<div class="list__container">
+    <ul *ngIf="languages.length">
+      <li class="list__element" *ngFor="let language of languages">
+        <div class="list__media">
+          <img [src]="language.image" [alt]="language.name" />
+        </div>
+        <div class="list__article">
+          <p><b>Name:</b> {{ language.name }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
