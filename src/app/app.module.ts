@@ -7,6 +7,7 @@ import { LanguagesComponent } from './components/languages/languages.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { KnowledgeComponent } from './components/knowledge/knowledge.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { KnowledgeComponent } from './components/knowledge/knowledge.component';
     LanguagesComponent,
     ContactComponent,
     WelcomeComponent,
-    KnowledgeComponent
+    KnowledgeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
