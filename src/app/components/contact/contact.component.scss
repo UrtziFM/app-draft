@@ -1,0 +1,205 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+body {
+    background:#247416;
+    background-size: cover;
+    padding-top:60px;
+    padding-bottom: 60px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    margin: 3px;
+}
+
+form {
+    margin-left:auto;
+    margin-right:auto;
+    width: 50%;
+    height: 1000px;
+    padding:30px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+    background-clip: padding-box;
+    background: #247416; 
+    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    overflow: hidden; 
+}
+
+textarea {
+    background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px; 
+    width: 50%;
+    height: 110px;
+    border: 1px solid rgba(255,255,255,.6);
+    border-radius: 4px;
+    background-clip: padding-box; 
+    display:block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:18px;
+    color:#fff;
+    padding:20px;
+    margin-top:50px;
+    overflow:hidden;
+}
+
+input {
+    width: 50%;
+    height: 48px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 4px;
+    background-clip: padding-box; 
+    display:block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:18px;
+    color:#fff;
+    padding-left:20px;
+    padding-right:20px;
+    margin-bottom:20px;
+}
+
+input[type=submit] {
+    cursor:pointer;
+}
+
+input.name {
+      background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_name.png) no-repeat scroll 16px 16px; 
+      padding-left:45px;
+}
+
+input.email {
+      background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_email.png) no-repeat scroll 16px 20px;
+      padding-left:45px;
+}
+
+input.message {
+      background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px;
+      padding-left:45px;
+}
+
+input.radio {
+    background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px;
+    padding-left:45px;
+}
+
+input.checkbox {
+    background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px;
+    padding-left:45px;
+}
+
+
+input:focus, textarea:focus { 
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+    overflow: hidden; 
+}
+
+.btn {
+    width: 138px;
+    height: 44px;
+    border-radius: 4px;
+    float:right;
+    border: 1px solid #253737;
+    background: #416b68;
+    background-image: -ms-linear-gradient(top, #6da5a3 0%, #416b68 100%);
+    padding: 10.5px 21px;
+    border-radius: 6px;
+    box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    text-shadow: #333333 0 1px 0;
+    color: #e1e1e1;
+}
+
+.btn:hover {
+    border: 1px solid #253737;
+    text-shadow: #333333 0 1px 0;
+    background: #416b68;
+    background-image: -ms-linear-gradient(top, #77b2b0 0%, #416b68 100%);
+    color: #fff;
+ }
+
+.btn:active {
+    margin-top:1px;
+    text-shadow: #333333 0 -1px 0;
+    border: 1px solid #253737;
+    background: #6da5a3;
+    background-image: -ms-linear-gradient(top, #416b68 0%, #6da5a3 100%);
+    color: #fff;
+    box-shadow: rgba(255,255,255,0) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+   }
+
+
+.container {
+    margin: 0px auto;
+    width: 50%;
+    float: left;
+  }
+
+h3 {
+    color: whitesmoke;
+    margin: 5px;
+  }
+  
+.container .progress {
+    margin: 10px auto;
+    width: 80%;
+    float: left;
+  }
+  
+.progress {
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+  }
+  
+.progress-bar {
+    height: 24px;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+  }
+  
+#five:checked ~ .progress > .progress-bar {
+    width: 5%;
+    background-color: #f34213;
+  }
+  
+#twentyfive:checked ~ .progress > .progress-bar {
+    width: 25%;
+    background-color: #f27011;
+  }
+  
+#fifty:checked ~ .progress > .progress-bar {
+    width: 50%;
+    background-color: #f2b01e;
+  }
+  
+#seventyfive:checked ~ .progress > .progress-bar {
+    width: 75%;
+    background-color: #f2d31b;
+  }
+  
+#onehundred:checked ~ .progress > .progress-bar {
+    width: 100%;
+    background-color: #86e01e;
+  }
+  
+.radio {
+    display: none;
+  }
+  
+.label {
+    display: inline-block;
+    margin: 0 5px 20px;
+    padding: 3px 8px;
+    color: #aaa;
+    text-shadow: 0 1px black;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+.radio:checked + .label {
+    color: white;
+    background: rgba(0, 0, 0, 0.25);
+  }
+  

@@ -33,6 +33,7 @@ header {
 }
 .menu_subtitle {
     margin: 3px;
+    color: whitesmoke;
 }
 .menu_menu {
     margin: 3px;
@@ -49,7 +50,7 @@ header {
     color: black;
     border: 2px solid black;
     border-radius: 10px;
-    margin: 2px;
+    margin: 4px;
     text-align: center;
     font-size: inherit;
     transition: font-size .5 ease;
@@ -63,8 +64,9 @@ header {
     position: absolute;
     right: 1rem;
     top: 3rem;
-    border: 2px solid black;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
     border-radius: 10px;
     padding: .5rem;
-    font-size: 1.5rem;;
+    font-size: 1.5rem;
 }
