@@ -1,10 +1,7 @@
-<div class="list__container">
-  <ul *ngIf="languages.length">
-    <li class="list__element" *ngFor="let language of languages">
-      <div class="list__media">
-        <img [src]="language.image" [alt]="language.name" />
-      </div>
-    </li>
-  </ul>
+<div class="slider">
+  <div class="slide-track">
+    <div class="slide" *ngFor="let language of languages">
+      <img [src]="language.image" [alt]="language.name" height="120px" width="250px" />
+    </div>
+  </div>
 </div>
-

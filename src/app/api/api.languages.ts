@@ -17,13 +17,13 @@ const response: ILanguage[] = [
     id: 2,
     name: 'HTML5',
     // tslint:disable-next-line: max-line-length
-    image: 'https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjgnMqPnMfmAhXSA2MBHQCBC0UQjRx6BAgBEAQ&url=https%3A%2F%2Fonsongapp.com%2Fdocs%2Ffeatures%2Fformats%2Fhtml&psig=AOvVaw3Bf7OLkRJIr6IFhlFu2w1Y&ust=1577033981073234'
+    image: 'https://www.anerbarrena.com/wp-content/uploads/2016/04/html5.png'
 },
     {
     id: 3,
     name: 'CSS3',
     // tslint:disable-next-line: max-line-length
-    image: 'https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwiS_4-3nMfmAhW98uAKHa7TAVIQjRx6BAgBEAQ&url=https%3A%2F%2Ficons-for-free.com%2Fcss3%2Binternet%2Bstyle%2Btechnology%2Bweb%2Bwebsite%2Bicon-1320192729058533072%2F&psig=AOvVaw1YgEuJqwImlv56QYR9ZD0Z&ust=1577034187337600'
+    image: 'https://blog.aulaformativa.com/wp-content/uploads/2016/09/definicion-usos-ventajas-lenguaje-css3-que-es.jpg'
 },
     {
     id: 4,
