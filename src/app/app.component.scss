@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+body {
+    background-color: green;
+    color: #111111;
+    font-family: 'Lobster', cursive;
+}
+.header {
+    background-color: rgb(93, 139, 8);
+    text-align: center;
+    font-size: 2rem;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+header {
+    background-color: rgb(73, 128, 77);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.header_menu {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    display: flex;
+    flex-direction: column;
+    height: 145px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: height 0.5s ease;
+    position: relative;
+}
+.header_menu:hover {
+    height: 190px;
+    background-color: rgb(100, 161, 9);
+}
+.menu_subtitle {
+    margin: 3px;
+    color: whitesmoke;
+}
+.menu_menu {
+    margin: 3px;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-evenly;
+    opacity: 0.3;
+    transition: opacity .1s ease;
+}
+.menu_menu:hover {
+    opacity: 1;
+}
+.menu_menu a {
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 4px;
+    text-align: center;
+    font-size: inherit;
+    transition: font-size .5 ease;
+}
+.menu_menu a:active{
+    color: yellowgreen;
+    font-size: inherit;
+}
+.menu_btn {
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    padding: .5rem;
+    font-size: 1.5rem;
+}

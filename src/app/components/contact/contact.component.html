@@ -1,0 +1,60 @@
+<form [formGroup]="contactform" (ngSubmit)="onFormSubmit(contactform.value)">
+   
+    <input formControlName="name" placeholder="What is your name?" class="name" type="text" required />
+   
+    <input formControlName="email" placeholder="What is your email?" class="email" type="email" required />
+
+    <div>
+        <h3>How can I help you?</h3>
+        <input type="checkbox" class="check" formControlName="check" value="professional" checked>
+            <label for="checkbox"></label>
+            <h4>Profesionally</h4>
+    
+        <input type="checkbox" class="check" formControlName="check" value="personal">
+            <label for="checkbox"></label>
+            <h4>Personally</h4>
+    
+    </div>
+
+    <div>
+        <h3>Are you a Recruiter?</h3>
+        <input type="radio" class="radio1" formControlName="recruiter" value="Yes" checked>
+            <label for="Yes"></label>
+            <h4>Yes</h4>
+
+        <input type="radio" class="radio1" formControlName="recruiter" value="No">
+            <label for="No"></label>
+            <h4>No</h4>
+    
+    </div>
+
+    <div class="container">
+        <h3>If you are a Recruiter, your offer is ...</h3>
+        <input type="radio" class="radio" formControlName="progress" value="five" id="five">
+            <label for="five" class="label">5.000</label>
+      
+        <input type="radio" class="radio" formControlName="progress" value="twentyfive" id="twentyfive">
+            <label for="twentyfive" class="label">25.000</label>
+      
+        <input type="radio" class="radio" formControlName="progress" value="fifty" id="fifty">
+            <label for="fifty" class="label">50.000</label>
+      
+        <input type="radio" class="radio" formControlName="progress" value="seventyfive" id="seventyfive" checked>
+            <label for="seventyfive" class="label">75.000</label>
+      
+        <input type="radio" class="radio" formControlName="progress" value="onehundred" id="onehundred">
+            <label for="onehundred" class="label">100.000</label>
+      
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+
+      </div>
+
+    <textarea rows="4" cols="50" formControlName="subject" placeholder="Please enter your message" class="message" required></textarea>
+    
+        <input name="submit" class="btn" type="submit" value="Send" />  
+
+</form>
+
+

@@ -1,6 +1,19 @@
 <h1>Hello brother! This is {{ title }} working</h1>
 
-<app-introduction></app-introduction>
+<div class='header'><strong>Hello!<br>This is me: {{ name }} {{ surname }}  </strong></div>
+<header class="header_menu">
+    <h2 class="menu_subtitle">* Product Owner</h2>
+    <h2 class="menu_subtitle">* Agile Ambassador</h2>
+    <h2 class="menu_subtitle">* Data Scientist Junior</h2>
+    <h2 class="menu_subtitle">* FullStack Developer Junior</h2>
+    <span class="menu_btn">Menu</span>
+    <nav class="menu_menu">
+        <a [routerLink]= "['/']">Home</a>
+        <a [routerLink]= "['/Welcome']">Warm Welcome</a>
+        <a [routerLink]= "['/Knowledge']">Knowledge and Experience</a>
+        <a [routerLink]= "['/Contact']">Contact me</a>
+    </nav>
+</header>
 
 <app-languages></app-languages>
 
