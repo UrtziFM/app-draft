@@ -1,46 +1,48 @@
-<body>
-
-<form>
+<form [formGroup]="contactform" (ngSubmit)="onFormSubmit(contactform.value)">
    
-    <input name="name" placeholder="What is your name?" class="name" required />
+    <input formControlName="name" placeholder="What is your name?" class="name" type="text" required />
    
-    <input name="emailaddress" placeholder="What is your email?" class="email" type="email" required />
+    <input formControlName="email" placeholder="What is your email?" class="email" type="email" required />
 
-    <div class="checkbox1">
+    <div>
         <h3>How can I help you?</h3>
-        <input type="checkbox" class="checkbox1" name="check" value="professional" checked>
-            <label for="professional" class="label">Professional</label>
+        <input type="checkbox" class="check" formControlName="check" value="professional" checked>
+            <label for="checkbox"></label>
+            <h4>Profesionally</h4>
     
-        <input type="checkbox" class="checkbox1" name="check" value="personal">
-            <label for="personal" class="label">Personal</label>
+        <input type="checkbox" class="check" formControlName="check" value="personal">
+            <label for="checkbox"></label>
+            <h4>Personally</h4>
     
     </div>
 
-    <div class="radio1">
+    <div>
         <h3>Are you a Recruiter?</h3>
-        <input type="radio" class="radio1" name="recruiter" value="Yes" checked>
-            <label for="Yes" class="label">Yes</label>
+        <input type="radio" class="radio1" formControlName="recruiter" value="Yes" checked>
+            <label for="Yes"></label>
+            <h4>Yes</h4>
 
-        <input type="radio" class="radio1" name="recruiter" value="No">
-            <label for="No" class="label">No</label>
+        <input type="radio" class="radio1" formControlName="recruiter" value="No">
+            <label for="No"></label>
+            <h4>No</h4>
     
     </div>
 
     <div class="container">
         <h3>If you are a Recruiter, your offer is ...</h3>
-        <input type="radio" class="radio" name="progress" value="five" id="five">
+        <input type="radio" class="radio" formControlName="progress" value="five" id="five">
             <label for="five" class="label">5.000</label>
       
-        <input type="radio" class="radio" name="progress" value="twentyfive" id="twentyfive">
+        <input type="radio" class="radio" formControlName="progress" value="twentyfive" id="twentyfive">
             <label for="twentyfive" class="label">25.000</label>
       
-        <input type="radio" class="radio" name="progress" value="fifty" id="fifty">
+        <input type="radio" class="radio" formControlName="progress" value="fifty" id="fifty">
             <label for="fifty" class="label">50.000</label>
       
-        <input type="radio" class="radio" name="progress" value="seventyfive" id="seventyfive" checked>
+        <input type="radio" class="radio" formControlName="progress" value="seventyfive" id="seventyfive" checked>
             <label for="seventyfive" class="label">75.000</label>
       
-        <input type="radio" class="radio" name="progress" value="onehundred" id="onehundred">
+        <input type="radio" class="radio" formControlName="progress" value="onehundred" id="onehundred">
             <label for="onehundred" class="label">100.000</label>
       
         <div class="progress">
@@ -49,10 +51,10 @@
 
       </div>
 
-    <textarea rows="4" cols="50" name="subject" placeholder="Please enter your message" class="message" required></textarea>
+    <textarea rows="4" cols="50" formControlName="subject" placeholder="Please enter your message" class="message" required></textarea>
     
         <input name="submit" class="btn" type="submit" value="Send" />  
 
 </form>
-</body>
+
 
