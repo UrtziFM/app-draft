@@ -1,10 +1,10 @@
-<form [formGroup]="contactform" (ngSubmit)="onFormSubmit(contactform.value)">
+<form [formGroup]="contactForm" (ngSubmit)="onFormSubmit(contactForm.value)">
    
     <input formControlName="name" placeholder="What is your name?" class="name" type="text" required />
    
     <input formControlName="email" placeholder="What is your email?" class="email" type="email" required />
 
-    <div>
+    
         <h3>How can I help you?</h3>
         <input type="checkbox" class="check" formControlName="check" value="professional" checked>
             <label for="checkbox"></label>
@@ -14,9 +14,8 @@
             <label for="checkbox"></label>
             <h4>Personally</h4>
     
-    </div>
 
-    <div>
+
         <h3>Are you a Recruiter?</h3>
         <input type="radio" class="radio1" formControlName="recruiter" value="Yes" checked>
             <label for="Yes"></label>
@@ -25,8 +24,7 @@
         <input type="radio" class="radio1" formControlName="recruiter" value="No">
             <label for="No"></label>
             <h4>No</h4>
-    
-    </div>
+
 
     <div class="container">
         <h3>If you are a Recruiter, your offer is ...</h3>
@@ -53,7 +51,7 @@
 
     <textarea rows="4" cols="50" formControlName="subject" placeholder="Please enter your message" class="message" required></textarea>
     
-        <input name="submit" class="btn" type="submit" value="Send" />  
+        <input forControlName="submit" class="btn" type="submit" value="Send" />  
 
 </form>
 
