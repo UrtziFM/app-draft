@@ -12,9 +12,9 @@ export class ContactComponent implements OnInit {
 
   @Input() name: string = '';
   @Input() email: string = '';
-  @Input() check: string = '';
-  @Input() recruiter: string = '';
-  @Input() progress: string = '';
+  @Input() check: boolean;
+  @Input() recruiter: boolean;
+  @Input() progress: boolean;
   @Input() subject: string = '';
 
   @Output() formHandler = new EventEmitter<IContact>();
@@ -48,6 +48,8 @@ export class ContactComponent implements OnInit {
   onFormSubmit(values: IContactForm){
     const contactValue: IContact = this.formatFormValues(values);
     this.formHandler.emit(contactValue);
+    console.log(contactValue);
+    this.contactForm.reset();
   }
 
 }

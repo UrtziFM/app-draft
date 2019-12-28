@@ -4,14 +4,14 @@
    
     <input formControlName="email" placeholder="What is your email?" class="email" type="email" required />
 
-    
+    <div>
         <h3>How can I help you?</h3>
-        <input type="checkbox" class="check" formControlName="check" value="professional" checked>
-            <label for="checkbox"></label>
+        <input type="radio" class="radio1" formControlName="check" value="professional" checked>
+            <label for="professional"></label>
             <h4>Profesionally</h4>
     
-        <input type="checkbox" class="check" formControlName="check" value="personal">
-            <label for="checkbox"></label>
+        <input type="radio" class="radio1" formControlName="check" value="personal">
+            <label for="personal"></label>
             <h4>Personally</h4>
     
 
@@ -24,7 +24,7 @@
         <input type="radio" class="radio1" formControlName="recruiter" value="No">
             <label for="No"></label>
             <h4>No</h4>
-
+    </div>
 
     <div class="container">
         <h3>If you are a Recruiter, your offer is ...</h3>

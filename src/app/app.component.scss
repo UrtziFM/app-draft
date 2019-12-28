@@ -21,14 +21,14 @@ header {
     margin-bottom: 3px;
     display: flex;
     flex-direction: column;
-    height: 145px;
+    height: 190px;
     overflow: hidden;
     cursor: pointer;
     transition: height 0.5s ease;
     position: relative;
 }
 .header_menu:hover {
-    height: 190px;
+    height: 240px;
     background-color: rgb(100, 161, 9);
 }
 .menu_subtitle {
