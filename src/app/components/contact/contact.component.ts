@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit {
   @Input() recruiter: string = '';
   @Input() progress: string = '';
   @Input() subject: string = '';
-  
+
   @Output() formHandler = new EventEmitter<IContact>();
 
   contactForm: FormGroup;
