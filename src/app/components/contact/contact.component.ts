@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { IContactForm, IContact } from '../../interfaces/contact.interface';
 
@@ -25,15 +25,13 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
-      name: [this.name],
-      email: [this.email],
+      name: [this.name, Validators.required],
+      email: [this.email, Validators.required],
       check: [this.check],
       recruiter: [this.recruiter],
       progress: [this.progress],
-      subject: [this.subject]
+      subject: [this.subject, Validators.required]
     });
-    console.log(this.name);
-    console.log(this.email);
   }
 
   formatFormValues(values: IContactForm): IContact {
