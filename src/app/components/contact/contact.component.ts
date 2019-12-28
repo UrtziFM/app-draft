@@ -32,6 +32,8 @@ export class ContactComponent implements OnInit {
       progress: [this.progress],
       subject: [this.subject]
     });
+    console.log(this.name);
+    console.log(this.email);
   }
 
   formatFormValues(values: IContactForm): IContact {
