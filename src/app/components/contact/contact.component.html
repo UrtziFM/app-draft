@@ -10,44 +10,40 @@
         <div *ngIf= "f.email.errors.required"> <h5>Please introduce your email, it is required</h5></div>
     </div>
 
-    <div>
-        <h3>How can I help you?</h3>
+    <div class="help">
+        <h5>How can I help you?</h5>
+            <h6>Profesionally</h6>
         <input type="radio" class="radio1" formControlName="check" value="professional" checked>
             <label for="professional"></label>
-            <h4>Profesionally</h4>
-    
+            <h6>Personally</h6>
         <input type="radio" class="radio1" formControlName="check" value="personal">
             <label for="personal"></label>
-            <h4>Personally</h4>
-    
 
-
-        <h3>Are you a Recruiter?</h3>
+        <h5>Are you a Recruiter?</h5>
+            <h6>Yes</h6>
         <input type="radio" class="radio1" formControlName="recruiter" value="Yes" checked>
             <label for="Yes"></label>
-            <h4>Yes</h4>
-
+            <h6>No</h6>
         <input type="radio" class="radio1" formControlName="recruiter" value="No">
             <label for="No"></label>
-            <h4>No</h4>
     </div>
 
     <div class="container">
-        <h3>If you are a Recruiter, your offer is ...</h3>
+        <h5>If you are a Recruiter, your offer is ...</h5>
         <input type="radio" class="radio" formControlName="progress" value="five" id="five">
-            <label for="five" class="label">5.000</label>
+            <label for="five" class="label">less than 5.000 euros</label>
       
         <input type="radio" class="radio" formControlName="progress" value="twentyfive" id="twentyfive">
-            <label for="twentyfive" class="label">25.000</label>
+            <label for="twentyfive" class="label">less than 25.000 euros but more than 5.000 euros</label>
       
         <input type="radio" class="radio" formControlName="progress" value="fifty" id="fifty">
-            <label for="fifty" class="label">50.000</label>
+            <label for="fifty" class="label">less than 50.000 euros but more than 25.000 euros</label>
       
         <input type="radio" class="radio" formControlName="progress" value="seventyfive" id="seventyfive" checked>
-            <label for="seventyfive" class="label">75.000</label>
+            <label for="seventyfive" class="label">less than 75.000 euros but more than 50.000 euros</label>
       
         <input type="radio" class="radio" formControlName="progress" value="onehundred" id="onehundred">
-            <label for="onehundred" class="label">100.000</label>
+            <label for="onehundred" class="label">more than 75.000 euros</label>
       
         <div class="progress">
           <div class="progress-bar"></div>
@@ -60,8 +56,8 @@
           <div *ngIf= "f.subject.errors.required"> <h5>Please, introduce your message, it is required</h5></div>
       </div>
   
-      
           <button [disabled]='loading' class="btn">Send</button> 
+
 </form>
 
 
