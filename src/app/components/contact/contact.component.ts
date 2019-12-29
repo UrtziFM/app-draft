@@ -20,17 +20,18 @@ export class ContactComponent implements OnInit {
   @Output() formHandler = new EventEmitter<IContact>();
 
   contactForm: FormGroup;
+  submitted = false;
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
       name: [this.name, Validators.required],
-      email: [this.email, Validators.required],
+      email: [this.email, [Validators.required, Validators.email]],
       check: [this.check],
       recruiter: [this.recruiter],
       progress: [this.progress],
-      subject: [this.subject, Validators.required]
+      subject: [this.subject, [Validators.required, Validators.minLength(10)]]
     });
   }
 
@@ -45,11 +46,17 @@ export class ContactComponent implements OnInit {
     };
   }
 
+  get f() {return this.contactForm.controls; }
+
   onFormSubmit(values: IContactForm){
+    this.submitted = true;
+    if (this.contactForm.invalid) {
+      return;
+    }
     const contactValue: IContact = this.formatFormValues(values);
     this.formHandler.emit(contactValue);
     console.log(contactValue);
+    alert('Form sended! Thanks');
     this.contactForm.reset();
   }
-
 }
