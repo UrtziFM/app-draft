@@ -18,7 +18,7 @@ mongoose.connect(dbConfig.db, {
 )
 
 // Setting up port with express js
-const employeeRoute = require('../backend/routes/employee.route')
+const formRoute = require('./routes/form.route')
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors()); 
 app.use(express.static(path.join(__dirname, 'dist/mean-stack-crud-app')));
 app.use('/', express.static(path.join(__dirname, 'dist/mean-stack-crud-app')));
-app.use('/api', employeeRoute)
+app.use('/api', formRoute)
 
 // Create port
 const port = process.env.PORT || 4000;
