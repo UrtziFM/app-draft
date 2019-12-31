@@ -10,6 +10,11 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { KnowledgeComponent } from './components/knowledge/knowledge.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { ApiContactService } from './services/contact.service';
+import { FormsListComponent } from './components/forms-list/forms-list.component';
 
 @NgModule({
   declarations: [
@@ -18,16 +23,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     WelcomeComponent,
     KnowledgeComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent,
+    FormsListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

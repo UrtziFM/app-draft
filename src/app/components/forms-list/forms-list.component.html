@@ -1,0 +1,30 @@
+<div class="container">
+    <!-- Forms list -->
+    <table class="table table-bordered" *ngIf="Form.length >= 0">
+      <thead class="table-success">
+        <tr>
+          <th scope="col">Form ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Type of Help</th>
+          <th scope="col">Recruiter</th>
+          <th scope="col">Offer</th>
+          <th scope="col">Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let form of Form; let i = index">
+          <th scope="row">{{form._id}}</th>
+          <td>{{form.name}}</td>
+          <td>{{form.email}}</td>
+          <td>{{form.check}}</td>
+          <td>{{form.recruiter}}</td>
+          <td>{{form.progress}}</td> 
+          <td>{{form.subject}}</td>
+            <span class="delete" (click)="removeForm(form, i)">
+              <button type="button" class="btn btn-danger btn-sm">Delete</button>
+            </span>
+        </tr>
+      </tbody>
+    </table>
+  </div>
