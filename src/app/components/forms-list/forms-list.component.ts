@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiContactService } from '../../services/contact.service';
 
 @Component({
   selector: 'app-forms-list',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormsListComponent implements OnInit {
 
-  constructor() { }
+  Form: any = [];
 
-  ngOnInit() {
+  constructor(private apiContactService: ApiContactService) {
+    this.readForm();
+   }
+
+  ngOnInit() {}
+
+  readForm() {
+    this.apiContactService.getForms().subscribe((data) => {
+      this.Form = data;
+    });
   }
 
+  removeForm(form, index) {
+    if(window.confirm('Are you sure of that?')){
+      this.apiContactService.deleteForm(form._id).subscribe((data) => {
+        this.Form.splice(index, 1);
+      });
+    }
+  }
 }

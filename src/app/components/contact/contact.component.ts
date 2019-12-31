@@ -78,7 +78,7 @@ export class ContactComponent implements OnInit {
       this.apiContactService.createForm(contactValue).subscribe(
         (res) => {
           console.log('Form succesfully added in database');
-          this.ngZone.run(() => this.router.navigateByUrl('/Forms'))
+          this.ngZone.run(() => this.router.navigateByUrl('/'))
         }, (error) => {
           console.log(error);
         });
