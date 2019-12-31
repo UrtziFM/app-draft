@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ApiContactService } from './services/contact.service';
+import { FormsListComponent } from './components/forms-list/forms-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     WelcomeComponent,
     KnowledgeComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    FormsListComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgbModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ApiContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
