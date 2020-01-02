@@ -20,15 +20,15 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.nasaService.getalbums()
     .subscribe((data: INasaResponse) => {
-      let results: INasa[] = data.results;
+      const results: INasa[] = data.results;
 
-      let formattedresults = results.map(({ id, name, image }) => ({
+      const formattedresults = results.map(({ id, name, image }) => ({
         id,
         name,
         image,
-      }))
+      }));
 
-    this.nasaimages = [...formattedresults];
-    })
+      this.nasaimages = [...formattedresults];
+    });
   }
 }

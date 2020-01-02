@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-let baseUrl: string = 'https://rickandmortyapi.com/api/';
-let albumUrl: string = `${baseUrl}character/`;
+const baseUrl: string = 'https://rickandmortyapi.com/api/';
+const albumUrl: string = `${baseUrl}character/`;
 
 @Injectable({
   providedIn: 'root'
