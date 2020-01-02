@@ -1,1 +1,7 @@
-<p>home works!</p>
+<div *ngIf="nasaimages.length">
+    <h3>Nasa Images</h3>
+    <div *ngFor="let nasaimage of nasaimages">
+      <h4>{{ nasaimage.id }} -- {{ nasaimage.name }}</h4>
+      <img [src]="nasaimage.image" [alt]="nasaimage.name">
+    </div>
+  </div>
