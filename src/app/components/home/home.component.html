@@ -1,7 +1,16 @@
-<div *ngIf="nasaimages.length">
-    <h3>Nasa Images</h3>
-    <div *ngFor="let nasaimage of nasaimages">
-      <h4>{{ nasaimage.id }} -- {{ nasaimage.name }}</h4>
-      <img [src]="nasaimage.image" [alt]="nasaimage.name">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner" *ngIf="nasaimages.length">
+      <div class="carousel-item active" *ngFor="let nasaimage of nasaimages">
+        <h4>{{ nasaimage.id }} -- {{ nasaimage.name }}</h4>
+        <img [src]="nasaimage.image" class="d-block w-90" [alt]="nasaimage.name">
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
