@@ -1,12 +1,12 @@
+  <div class="home_carousel">
   <ngb-carousel #carousel interval="2000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
       <ng-template ngbSlide *ngFor="let nasaimage of nasaimages; index as i">
         <div class="carousel-caption">
-          <h3>My slide {{i + 1}} title</h3>
           <h4>{{ nasaimage.id }} -- {{ nasaimage.name }}</h4>
         </div>
         <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
           <div class="picsum-img-wrapper">
-            <img [src]="nasaimage.image" [alt]="nasaimage.name" width="500px" height="500px">
+            <img [src]="nasaimage.image" [alt]="nasaimage.name" height="600px">
           </div>
         </a>
       </ng-template>
@@ -29,3 +29,4 @@
     <button type="button" (click)="togglePaused()" class="btn btn-outline-dark btn-sm">
       {{paused ? 'Cycle' : 'Pause' }}
     </button>
+    </div>
