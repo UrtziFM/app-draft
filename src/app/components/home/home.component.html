@@ -1,16 +1,31 @@
-  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-    <div class="carousel-inner" *ngIf="nasaimages.length">
-      <div class="carousel-item active" *ngFor="let nasaimage of nasaimages">
-        <h4>{{ nasaimage.id }} -- {{ nasaimage.name }}</h4>
-        <img [src]="nasaimage.image" class="d-block w-90" [alt]="nasaimage.name">
-      </div>
+  <ngb-carousel #carousel interval="2000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+      <ng-template ngbSlide *ngFor="let nasaimage of nasaimages; index as i">
+        <div class="carousel-caption">
+          <h3>My slide {{i + 1}} title</h3>
+          <h4>{{ nasaimage.id }} -- {{ nasaimage.name }}</h4>
+        </div>
+        <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
+          <div class="picsum-img-wrapper">
+            <img [src]="nasaimage.image" [alt]="nasaimage.name" width="500px" height="500px">
+          </div>
+        </a>
+      </ng-template>
+    </ngb-carousel>
+    
+    <hr>
+    
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="pauseOnHover" [(ngModel)]="pauseOnHover">
+      <label class="form-check-label" for="pauseOnHover">Pause on hover</label>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="unpauseOnArrow" [(ngModel)]="unpauseOnArrow">
+      <label class="form-check-label" for="unpauseOnArrow">Unpause when clicking on arrows</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="pauseOnIndicator" [(ngModel)]="pauseOnIndicator">
+      <label class="form-check-label" for="pauseOnIndicator">Pause when clicking on navigation indicator</label>
+    </div>
+    <button type="button" (click)="togglePaused()" class="btn btn-outline-dark btn-sm">
+      {{paused ? 'Cycle' : 'Pause' }}
+    </button>
