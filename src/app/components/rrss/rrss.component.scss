@@ -1,5 +1,5 @@
 .header {
-    background-color: rgb(93, 139, 8);
+    background-color: rgb(65, 170, 17);
     text-align: center;
     font-size: 2rem;
     border: 2px solid black;
@@ -9,29 +9,25 @@
     flex-direction: row;
 }
 .card {
-    background-color: rgb(6, 165, 6);
+    background-color: rgb(14, 151, 14);
     text-align: center;
     font-size: 2rem;
     border: 2px solid black;
     border-radius: 10px;
     color: whitesmoke;
-    margin-left: 5%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-top: 30px;
+    margin-bottom: 30px;
     margin-right: 5%;
     width: 70%;
 }
-.card_linkedin {
-    background-color: rgb(6, 165, 6);
-    text-align: center;
-    font-size: 2rem;
+
+a {
+    margin: 5px;
+}
+
+img {
     border: 2px solid black;
     border-radius: 10px;
-    color: whitesmoke;
-    margin: 10px;
-    height: fit-content;
-    width: fit-content;
-}
-a {
     margin: 5px;
 }
