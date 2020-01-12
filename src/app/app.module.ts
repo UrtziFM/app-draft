@@ -15,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiContactService } from './services/contact.service';
 import { FormsListComponent } from './components/forms-list/forms-list.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsListComponent } from './components/forms-list/forms-list.component
     KnowledgeComponent,
     HomeComponent,
     FooterComponent,
-    FormsListComponent
+    FormsListComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

@@ -5,11 +5,14 @@ body {
     font-family: 'Lobster', cursive;
 }
 .header {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(93, 139, 8);
     text-align: center;
     font-size: 2rem;
     border: 2px solid black;
     border-radius: 10px;
+    color: whitesmoke;
 }
 header {
     background-color: rgb(73, 128, 77);
@@ -21,14 +24,14 @@ header {
     margin-bottom: 3px;
     display: flex;
     flex-direction: column;
-    height: 188px;
+    height: 257px;
     overflow: hidden;
     cursor: pointer;
     transition: height 0.5s ease;
     position: relative;
 }
 .header_menu:hover {
-    height: 240px;
+    height: 400px;
     background-color: rgb(100, 161, 9);
 }
 .menu_subtitle {
@@ -47,7 +50,7 @@ header {
     opacity: 1;
 }
 .menu_menu a {
-    color: black;
+    color:white;
     border: 2px solid black;
     border-radius: 10px;
     margin: 4px;
@@ -65,7 +68,7 @@ header {
     right: 1rem;
     top: 3rem;
     color: whitesmoke;
-    border: 2px solid whitesmoke;
+    border: 2px solid black;
     border-radius: 10px;
     padding: .5rem;
     font-size: 1.5rem;
