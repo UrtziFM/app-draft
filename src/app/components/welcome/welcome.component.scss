@@ -1,19 +1,17 @@
 .video_jobs{
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-right: 5%;
+    margin-left: 5%;
     margin-top: 3px;
     margin-bottom: 3px;
     border: 3px solid black;
+    border-radius: 10px;
     height: fit-content;
-}
-
-.scene {
-    text-align: center;
-    border: 3px solid black;
-    border-radius: 30px;
-    background-color: rgb(98, 156, 40);
-    margin: 3px;
+    padding: 1% 10% 1% 10%;
+    background-color: darkgreen;
     color: whitesmoke;
-    font-size: 6px;
+    text-align: center;
 }
 
+h4 {
+    margin: 3px;
+}
