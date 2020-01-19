@@ -22,17 +22,14 @@ header {
     position: relative;
 }
 .header_menu:hover {
-    height: 400px;
+    height: 440px;
     background-color: rgb(100, 161, 9);
 }
-.menu_subtitle {
-    margin: 3px;
-    color: whitesmoke;
-}
+
 .menu_menu {
     margin: 3px;
     display: flex;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     justify-content: space-evenly;
     opacity: 0.3;
     transition: opacity .1s ease;

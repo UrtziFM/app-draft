@@ -16,6 +16,7 @@ import { ApiContactService } from './services/contact.service';
 import { FormsListComponent } from './components/forms-list/forms-list.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { RrssComponent } from './components/rrss/rrss.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RrssComponent } from './components/rrss/rrss.component';
     HomeComponent,
     FormsListComponent,
     SkillsComponent,
-    RrssComponent
+    RrssComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
