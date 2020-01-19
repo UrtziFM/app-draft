@@ -22,28 +22,29 @@ header {
     position: relative;
 }
 .header_menu:hover {
-    height: 440px;
+    height: 435px;
     background-color: rgb(100, 161, 9);
 }
 
 .menu_menu {
     margin: 3px;
     display: flex;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    padding: .5rem;
     justify-content: space-evenly;
     opacity: 0.3;
     transition: opacity .1s ease;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
 }
 .menu_menu:hover {
     opacity: 1;
 }
 .menu_menu a {
     color:white;
-    border: 2px solid black;
-    border-radius: 10px;
-    margin: 4px;
+    margin-bottom: 3px;
     text-align: center;
-    font-size: inherit;
+    font-size: 1.2rem;
     transition: font-size .5 ease;
 }
 .menu_menu a:active{
