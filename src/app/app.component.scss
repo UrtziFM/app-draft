@@ -22,14 +22,14 @@ header {
     position: relative;
 }
 .header_menu:hover {
-    height: 435px;
+    height: 425px;
     background-color: rgb(100, 161, 9);
 }
 
 .menu_menu {
-    margin: 3px;
+    margin: 10px;
     display: flex;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: .5rem;
     justify-content: space-evenly;
     opacity: 0.3;
@@ -44,7 +44,7 @@ header {
     color:white;
     margin-bottom: 3px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     transition: font-size .5 ease;
 }
 .menu_menu a:active{
@@ -57,8 +57,8 @@ header {
     right: 1rem;
     top: 3rem;
     color: whitesmoke;
-    border: 2px solid black;
+    border: 2px solid whitesmoke;
     border-radius: 10px;
     padding: .5rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
