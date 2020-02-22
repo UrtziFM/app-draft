@@ -15,15 +15,11 @@ header {
     margin-bottom: 3px;
     display: flex;
     flex-direction: column;
-    height: 257px;
+    //height: 257px;
     overflow: hidden;
     cursor: pointer;
-    transition: height 0.5s ease;
+    //transition: height 0.5s ease;
     position: relative;
-}
-.header_menu:hover {
-    height: 420px;
-    background-color: rgb(100, 161, 9);
 }
 
 .menu_menu {
