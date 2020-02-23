@@ -10,11 +10,13 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { KnowledgeComponent } from './components/knowledge/knowledge.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FooterComponent } from './components/footer/footer.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ApiContactService } from './services/contact.service';
 import { FormsListComponent } from './components/forms-list/forms-list.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { RrssComponent } from './components/rrss/rrss.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,10 @@ import { FormsListComponent } from './components/forms-list/forms-list.component
     WelcomeComponent,
     KnowledgeComponent,
     HomeComponent,
-    FooterComponent,
-    FormsListComponent
+    FormsListComponent,
+    SkillsComponent,
+    RrssComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
