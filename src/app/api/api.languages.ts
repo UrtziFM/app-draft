@@ -60,7 +60,7 @@ const response: ILanguage[] = [
     {
     id: 10,
     name: 'PYTHON',
-    image: 'https://procodetech.com/wp-content/uploads/2019/04/python.png'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRbbykXtJeM5MnqAR5BsSuHsHu4D25Sa_grzbGSqjwz0nrabB-f'
 },
     {
     id: 11,
