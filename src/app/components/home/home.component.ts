@@ -31,10 +31,10 @@ export class HomeComponent implements OnInit {
     .subscribe((data: INasaResponse) => {
       const results: INasa[] = data.results;
 
-      const formattedresults = results.map(({ id, name, image }) => ({
-        id,
-        name,
-        image,
+      const formattedresults = results.map(({ category, question, correct_answer }) => ({
+        category,
+        question,
+        correct_answer,
       }));
 
       this.nasaimages = [...formattedresults];

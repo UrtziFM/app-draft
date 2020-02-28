@@ -1,10 +1,10 @@
 export interface INasa {
-    id: number;
-    name: string;
-    image: string;
+    category: string;
+    question: string;
+    correct_answer: string;
 }
 
 export interface INasaResponse {
-    info: object ;
+    response_code: number ;
     results: INasa[] ;
 }

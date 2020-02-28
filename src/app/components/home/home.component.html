@@ -1,14 +1,11 @@
   <div class="home_carousel">
   <ngb-carousel #carousel interval="2000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
-      <ng-template ngbSlide *ngFor="let nasaimage of nasaimages; index as i">
+      <ng-template ngbSlide *ngFor="let nasaimage of nasaimages">
         <div class="carousel-caption">
-          <h4>{{ nasaimage.id }} -- {{ nasaimage.name }}</h4>
+          <h4>{{ nasaimage.category }}</h4>
+          <h4>{{ nasaimage.question }}</h4>
+          <h4> {{ nasaimage.correct_answer }}</h4>
         </div>
-        <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
-          <div class="picsum-img-wrapper">
-            <img [src]="nasaimage.image" [alt]="nasaimage.name" height="600px">
-          </div>
-        </a>
       </ng-template>
     </ngb-carousel>
     
