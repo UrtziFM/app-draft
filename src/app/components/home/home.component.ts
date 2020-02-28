@@ -3,7 +3,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NasaService } from '../../services/nasa.service';
 
 import { INasa } from '../../interfaces/nasa.interface';
-import { INasaResponse } from '../../interfaces/nasa.interface';
 
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 
@@ -28,13 +27,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.nasaService.getalbums()
-    .subscribe((data: INasaResponse) => {
-      const results: INasa[] = data.results;
+    .subscribe((data: INasa[]) => {
 
-      const formattedresults = results.map(({ category, question, correct_answer }) => ({
-        category,
-        question,
-        correct_answer,
+      const formattedresults = data.map(({ name, capital, region, population, flag }) => ({
+        name,
+        capital,
+        region,
+        population,
+        flag
       }));
 
       this.nasaimages = [...formattedresults];

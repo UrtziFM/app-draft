@@ -1,10 +1,12 @@
 export interface INasa {
-    category: string;
-    question: string;
-    correct_answer: string;
+    name: string;
+    capital: string;
+    region: string;
+    population: number;
+    flag: string;
 }
 
-export interface INasaResponse {
-    response_code: number ;
-    results: INasa[] ;
-}
+// export interface INasaResponse {
+//    response_code: number ;
+//    results: INasa[] ;
+//}
