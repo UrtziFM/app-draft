@@ -2,12 +2,13 @@
   <ngb-carousel #carousel interval="2000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
       <ng-template ngbSlide *ngFor="let nasaimage of nasaimages">
         <div class="carousel-caption">
-          <h4>{{ nasaimage.name }} -- Capital: {{ nasaimage.capital }}</h4>
-          <h4> {{ nasaimage.region }} -- Population: {{ nasaimage.population }}</h4>
+          <h6>{{ nasaimage.name }} -- Capital: {{ nasaimage.capital }}</h6>
+          <h6>Continent: {{ nasaimage.region }}</h6>
+          <h6>Population: {{ nasaimage.population | number: '4.0'}}</h6>
         </div>
         <a href="https://www.google.es/?q={{nasaimage.name}}" target="_blank" rel="nofollow noopener noreferrer">
           <div class="picsum-img-wrapper">
-            <img [src]="nasaimage.flag" alt="flag" height="240px">
+            <img [src]="nasaimage.flag" alt="flag" height="220px">
           </div>
         </a>
       </ng-template>
