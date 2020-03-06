@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const baseUrl: string = 'https://rickandmortyapi.com/api/';
-const albumUrl: string = `${baseUrl}character/`;
+// tslint:disable-next-line: no-inferrable-types
+const baseUrl: string = 'https://restcountries.eu/rest/v2/';
+// tslint:disable-next-line: no-inferrable-types
+const albumUrl: string = `${baseUrl}all`;
 
 @Injectable({
   providedIn: 'root'
