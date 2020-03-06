@@ -1,10 +1,12 @@
 export interface INasa {
-    id: number;
     name: string;
-    image: string;
+    capital: string;
+    region: string;
+    population: number;
+    flag: string;
 }
 
-export interface INasaResponse {
-    info: object ;
-    results: INasa[] ;
-}
+// export interface INasaResponse {
+//    response_code: number ;
+//    results: INasa[] ;
+//}
