@@ -6,9 +6,12 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const sassMiddleware = require('node-sass-middleware');
+const hbs = require('hbs');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const formsRouter = require('./routes/forms');
 
 const app = express();
 
@@ -16,14 +19,33 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-app.use(logger('dev'));
+// To handle passing data as arguments in hbs functions, we need to stringify them as JSON.
+// This function creates a helper to use as {{ json value }}
+hbs.registerHelper('json', context => {
+  return JSON.stringify(context)
+})
+
+
+app.use(logger('dev'));// Logs in the terminal about how the server runs
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+// IMPORTANT: Use SassMiddleware always before express.static to parse the CSS before rendering the page.
+app.use(
+  sassMiddleware({
+    src: path.join(__dirname, './public'), // Source folder with SCSS files
+    dest: path.join(__dirname, './public'), // Destination folder to save the CSS files we will use
+    debug: true,
+    outputStyle: 'compressed' // Compress the produced CSS.
+  })
+)
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/forms', formsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
