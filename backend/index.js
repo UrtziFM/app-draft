@@ -18,7 +18,7 @@ mongoose.connect(dbConfig.db, {
 )
 
 // Setting up port with express js
-const formRoute = require('./routes/form.route')
+const formRoute = require('./routes/forms.route')
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -27,10 +27,10 @@ app.use(bodyParser.urlencoded({
 app.use(cors()); 
 app.use(express.static(path.join(__dirname, 'dist/mean-stack-crud-app')));
 app.use('/', express.static(path.join(__dirname, 'dist/mean-stack-crud-app')));
-app.use('/api', formRoute)
+app.use('/forms', formRoute)
 
 // Create port
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
   console.log('Connected to port ' + port)
 })
