@@ -8,9 +8,10 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
 const hbs = require('hbs');
+const cors = require('cors');
 
 const indexRouter = require('./routes/index.route');
-const usersRouter = require('./routes/forms.route');
+const formsRouter = require('./routes/forms.route');
 
 const app = express();
 
@@ -25,7 +26,19 @@ hbs.registerHelper('json', context => {
   return JSON.stringify(context)
 })
 
+const config = {
+  application: {
+      cors: {
+          server: [
+              {
+                  origin: "localhost:4200/Forms", //servidor que deseas que consuma o (*) en caso que sea acceso libre
+                  credentials: true
+              }
+          ]
+      }
+  }}
 
+app.use(cors(config.application.cors.server));
 app.use(logger('dev'));// Logs in the terminal about how the server runs
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -44,7 +57,7 @@ app.use(
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/forms', usersRouter);
+app.use('/forms', formsRouter);
 
 
 // catch 404 and forward to error handler
