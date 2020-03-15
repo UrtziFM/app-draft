@@ -6,7 +6,7 @@ const getForms = (req, res, next) => {
   Form.find()
     .then(forms => {
       //res.status(200).render('forms', { forms: forms })
-      res.status(200).json({forms})
+      res.status(200).json({forms});
     })
     .catch(err => {
       next(err)
