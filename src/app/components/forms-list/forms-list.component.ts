@@ -23,7 +23,7 @@ export class FormsListComponent implements OnInit {
   }
 
   removeForm(form, index) {
-    if(window.confirm('Are you sure of that?')){
+    if (window.confirm('Are you sure of that?')) {
       this.apiContactService.deleteForm(form._id).subscribe((data) => {
         this.Form.splice(index, 1);
       });
