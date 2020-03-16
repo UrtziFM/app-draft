@@ -22,8 +22,15 @@
 }
 .card-img-top {
     background-color: rgb(186, 204, 22);
-    height: 180px;
+    height: 120px;
 }
+p {
+    font-size: 0.9rem;
+}
+h6 {
+    text-decoration-line: underline;
+}
+
 }
 
 @media (max-width: 767px) {
@@ -52,6 +59,9 @@
         height: 120px;
     }
     p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+    }
+    h6 {
+        text-decoration-line: underline;
     }
     }
