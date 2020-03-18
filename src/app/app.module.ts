@@ -12,7 +12,7 @@ import { KnowledgeComponent } from './components/knowledge/knowledge.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ApiContactService } from './services/contact.service';
 import { FormsListComponent } from './components/forms-list/forms-list.component';
 import { SkillsComponent } from './components/skills/skills.component';
