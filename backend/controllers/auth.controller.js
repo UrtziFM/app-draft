@@ -1,7 +1,7 @@
 const passport = require('passport')
 
 const register = (req, res, next) => {
-  passport.authenticate('register', (err, user) => {
+  passport.authenticate('Register', (err, user) => {
     if (err || !user) {
       const error = new Error(err ? err.message : 'There was an error creating the user')
       return next(error)
@@ -13,7 +13,7 @@ const register = (req, res, next) => {
 
 
 const login = (req, res, next) => {
-  passport.authenticate('login', (err, token) => {
+  passport.authenticate('Login', (err, token) => {
     if (err || !token) {
       const error = new Error('There was an error login in')
       return next(error)

@@ -8,7 +8,7 @@ const router = express.Router()
 
 router.get('/is-logged', [isAuthenticated], authController.isLoggedIn)
 
-router.post('/register', [isPasswordValid], authController.register)
-router.post('/login', [isPasswordValid], authController.login)
+router.post('/Register', [isPasswordValid], authController.register)
+router.post('/Login', [isPasswordValid], authController.login)
 
 module.exports = router

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LanguagesComponent } from './components/languages/languages.component';
@@ -11,15 +12,12 @@ import { KnowledgeComponent } from './components/knowledge/knowledge.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiContactService } from './services/contact.service';
 import { FormsListComponent } from './components/forms-list/forms-list.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { RrssComponent } from './components/rrss/rrss.component';
 import { ExperienceComponent } from './components/experience/experience.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -32,10 +30,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     FormsListComponent,
     SkillsComponent,
     RrssComponent,
-    ExperienceComponent,
-    LoginComponent,
-    RegisterComponent,
-    UserProfileComponent
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,

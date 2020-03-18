@@ -7,10 +7,6 @@ import { KnowledgeComponent } from './components/knowledge/knowledge.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsListComponent } from './components/forms-list/forms-list.component';
 import { ExperienceComponent } from './components/experience/experience.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { UserProfileComponent } from './user-profile/user-profile.component'
-
 
 
 const routes: Routes = [
@@ -19,10 +15,7 @@ const routes: Routes = [
   {path: 'Welcome', component: WelcomeComponent},
   {path: 'Experience', component: ExperienceComponent},
   {path: 'Knowledge', component: KnowledgeComponent},
-  {path: 'Forms', redirectTo: 'Login', pathMatch: 'full', component: FormsListComponent},
-  {path: 'Login', component: LoginComponent },
-  {path: 'Register', component: RegisterComponent },
-  {path: 'Profile/:id', component: UserProfileComponent }
+  {path: 'Forms', component: FormsListComponent}
 ];
 
 @NgModule({
