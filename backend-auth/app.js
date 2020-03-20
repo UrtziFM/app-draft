@@ -7,6 +7,7 @@ const cors = require('cors')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
+const hbs = require('hbs')
 
 const passport = require('passport')
 require('./config/passport')
@@ -14,13 +15,16 @@ require('./config/passport')
 const indexRouter = require('./routes/index.routes')
 const authRouter = require('./routes/auth.routes')
 
-
-
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'hbs');
+
+hbs.registerHelper('json', context => {
+  return JSON.stringify(context)
+})
+
 
 app.use(cors())
 app.use(logger('dev'));

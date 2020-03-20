@@ -1,0 +1,15 @@
+<h3>Sign Up</h3>
+<form method="POST" action="/register/new">
+  <input name="email" type="email" placeholder="your email here" />
+  <input name="password" type="password" placeholder="introduce your password" />
+  <button type="submit">Sign Up</button>
+</form>
+
+<h3>These are all our Users:</h3>
+<ul>
+  {{#each user}}
+  <li>
+    <p>{{this.email}}</p><a href="register/{{this.id}}">Edit</a>
+  </li>
+  {{/each}}
+</ul>
