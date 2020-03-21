@@ -1,23 +1,6 @@
 const passport = require('passport')
 
-const User = require('../models/User')
-
 const register = (req, res, next) => {
-  const newUser = new User({
-    email: req.body.email,
-    password: req.body.password
-  })
-
-  newUser
-    .save()
-    .then(() => {
-      res.redirect('/register')
-    })
-    .catch(err => {
-      next(err)
-    })
-
-
   passport.authenticate('register', (err, user) => {
     if (err || !user) {
       const error = new Error(err ? err.message : 'There was an error creating the user')
