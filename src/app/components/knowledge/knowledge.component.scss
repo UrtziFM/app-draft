@@ -1,3 +1,4 @@
+@media (min-width: 768px) {
 .skills {
     margin-right: 5%;
     margin-left: 5%;
@@ -39,4 +40,53 @@ img {
     height: 70%;
     width: 50%;
     margin: 3px;
+}
+}
+
+@media (max-width: 768px) {
+    .skills {
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        border: 3px solid black;
+        border-radius: 10px;
+        padding: 1% 10% 1% 10%;
+        background-color: rgb(186, 204, 22);
+        color: whitesmoke;
+        text-align: center;
+    }
+    
+    .brief {
+        margin: 5px;
+        border: 2px solid whitesmoke;
+        border-radius: 10px;
+        background-color: rgb(198, 211, 17);
+        color: rgb(0, 153, 255);
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+    h5 {
+        font-size: 0.9rem;
+        text-decoration-line: underline;
+    }
+    
+    .school {
+        margin: 6px;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 1% 1% 1% 1%;
+        background-color: darkgreen;
+        color: whitesmoke;
+        text-align: center;
+        height: fit-content;
+    }
+    
+    img {
+        border: 2px solid black;
+        border-radius: 10px;
+        height: 160px;
+        width: 80%;
+        margin: 3px;
+    }
 }
