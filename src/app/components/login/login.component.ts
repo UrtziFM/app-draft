@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   @Output() formHandler = new EventEmitter<any>();
 
   SignIn: FormGroup;
-  submitted = false;
+
 
   constructor(
     private authService: AuthService,
