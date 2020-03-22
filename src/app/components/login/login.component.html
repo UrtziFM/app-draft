@@ -1,0 +1,6 @@
+<h3>Sign in</h3>
+<form [formGroup]="SignIn" (ngSubmit)="login(SignIn.value)">
+  <input formControlName="email" type="email" placeholder="your email here" />
+  <input formControlName="password" type="password" placeholder="introduce your password" />
+  <button [disabled]='loading' class="btn">Login</button> 
+</form>
