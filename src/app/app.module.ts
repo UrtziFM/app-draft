@@ -18,6 +18,7 @@ import { FormsListComponent } from './components/forms-list/forms-list.component
 import { SkillsComponent } from './components/skills/skills.component';
 import { RrssComponent } from './components/rrss/rrss.component';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ExperienceComponent } from './components/experience/experience.componen
     FormsListComponent,
     SkillsComponent,
     RrssComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
