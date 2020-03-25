@@ -1,0 +1,19 @@
+@media (min-width: 768px) {
+    button {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5px;
+        width: 80%;
+        border: 2px solid black;
+    }
+}
+@media (max-width: 767px) {
+    button {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5px;
+        width: 80%;
+        border: 2px solid black;
+        font-size: 0.9rem;
+    }
+    }

@@ -1,0 +1,70 @@
+@media (min-width: 768px) {
+    .head {
+        background-color: #bacc16;
+    }
+    .card {
+        background-color: rgb(25, 170, 25);
+        text-align: center;
+        font-size: 1.1rem;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: whitesmoke;
+        margin-left: 80%;
+        margin-bottom: 3px;
+        display: flex;
+        flex-direction: column;
+    }
+    input {
+        display: flex;
+        flex-direction: inherit;
+        width: fit-content;
+        margin: 3px;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        height: 20px;
+        font-size: 0.7rem;
+        background-color: #1daa3c;
+        text-align: center;
+    }
+    button {
+        display: flex;
+        flex-direction: inherit;
+        margin-left: 50%;
+    }
+    
+    }
+    
+    @media (max-width: 767px) {
+        .card {
+            background-color: rgb(25, 170, 25);
+            text-align: center;
+            font-size: 1.1rem;
+            border: 2px solid black;
+            border-radius: 10px;
+            color: whitesmoke;
+            margin-bottom: 3px;
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            display: flex;
+            flex-direction: inherit;
+            width: fit-content;
+            margin: 3px;
+            width: 60%;
+            margin-left: 20%;
+            margin-right: 20%;
+            height: 20px;
+            font-size: 0.7rem;
+            background-color: #1daa3c;
+            text-align: center;
+        }
+        button {
+            display: flex;
+            flex-direction: inherit;
+            margin-left: 45%;
+            margin-right: 45%;
+            font-size: 0.8rem;
+        }
+        }

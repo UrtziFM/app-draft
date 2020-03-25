@@ -1,0 +1,63 @@
+<form [formGroup]="contactForm" (ngSubmit)="onFormSubmit(contactForm.value)">
+   
+    <input formControlName="name" placeholder="What is your name?" class="name" type="text" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+        <div *ngIf= "f.name.errors.required"> <h5>Please introduce your name, it is required</h5></div>
+    </div>
+   
+    <input formControlName="email" placeholder="What is your email?" class="email" type="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf= "f.email.errors.required"> <h5>Please introduce your email, it is required</h5></div>
+    </div>
+
+    <div class="help">
+        <h5>How can I help you?</h5>
+            <h6>Profesionally</h6>
+        <input type="radio" class="radio1" formControlName="check" value="professional">
+            <label for="professional"></label>
+            <h6>Personally</h6>
+        <input type="radio" class="radio1" formControlName="check" value="personal">
+            <label for="personal"></label>
+
+        <h5>Are you a Recruiter?</h5>
+            <h6>Yes</h6>
+        <input type="radio" class="radio1" formControlName="recruiter" value="Yes">
+            <label for="Yes"></label>
+            <h6>No</h6>
+        <input type="radio" class="radio1" formControlName="recruiter" value="No">
+            <label for="No"></label>
+    </div>
+
+    <div class="container">
+        <h5>If you are a Recruiter, your offer is ...</h5>
+        <input type="radio" class="radio" formControlName="progress" value="five" id="five">
+            <label for="five" class="label">less than 5.000 euros</label>
+      
+        <input type="radio" class="radio" formControlName="progress" value="twentyfive" id="twentyfive">
+            <label for="twentyfive" class="label">less than 25.000 euros but more than 5.000 euros</label>
+      
+        <input type="radio" class="radio" formControlName="progress" value="fifty" id="fifty">
+            <label for="fifty" class="label">less than 50.000 euros but more than 25.000 euros</label>
+      
+        <input type="radio" class="radio" formControlName="progress" value="seventyfive" id="seventyfive">
+            <label for="seventyfive" class="label">less than 75.000 euros but more than 50.000 euros</label>
+      
+        <input type="radio" class="radio" formControlName="progress" value="onehundred" id="onehundred">
+            <label for="onehundred" class="label">more than 75.000 euros</label>
+      
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+
+      </div>
+
+      <textarea rows="4" cols="50" formControlName="subject" placeholder="Please enter your message" class="message" [ngClass]="{ 'is-invalid': submitted && f.subject.errors }"></textarea>
+      <div *ngIf="submitted && f.subject.errors" class="invalid-feedback">
+          <div *ngIf= "f.subject.errors.required"> <h5>Please, introduce your message, it is required</h5></div>
+      </div>
+  
+          <button [disabled]='loading' class="btn">Send</button> 
+
+</form>
+
+

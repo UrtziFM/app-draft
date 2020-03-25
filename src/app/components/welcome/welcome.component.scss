@@ -1,0 +1,62 @@
+@media (min-width: 768px) {
+
+.video_jobs{
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border: 3px solid black;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 1% 10% 1% 10%;
+    background-color: darkgreen;
+    color: whitesmoke;
+    text-align: center;
+}
+.brief {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    background-color: rgb(198, 211, 17);
+    color: rgb(198, 211, 17);
+    padding: 5px;
+    height: fit-content;
+}
+}
+
+@media (max-width: 767px) {
+
+    .video_jobs{
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        border: 3px solid black;
+        border-radius: 10px;
+        height: fit-content;
+        padding: 1% 10% 1% 10%;
+        background-color: darkgreen;
+        color: whitesmoke;
+        text-align: center;
+    }
+    .brief {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20%;
+        margin-right: 20%;
+        border: 2px solid whitesmoke;
+        border-radius: 10px;
+        background-color: rgb(198, 211, 17);
+        color: rgb(198, 211, 17);
+        padding: 5px;
+    }
+    h5 {
+        font-size: 1rem;
+    }
+    ul {
+        font-size: 0.8rem;
+    }
+}
