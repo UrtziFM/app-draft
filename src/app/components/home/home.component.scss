@@ -30,6 +30,17 @@ ngb-carousel .picsum-img-wrapper {
   button {
       margin: 5px;
   }
+  .planet {
+      background-color: darkgreen;
+      color: whitesmoke;
+      margin-left: 30%;
+      margin-right: 30%;
+      border: 2px solid black;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 3px;
+      font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 767px) {
@@ -69,4 +80,15 @@ ngb-carousel .picsum-img-wrapper {
       h6 {
           font-size: 0.9rem;
       }
+      .planet {
+        background-color: darkgreen;
+        color: whitesmoke;
+        margin-left: 5%;
+        margin-right: 5%;
+        border: 2px solid black;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 3px;
+        font-size: 0.9rem;
+    }
     }

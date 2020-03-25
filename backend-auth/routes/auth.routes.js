@@ -6,9 +6,9 @@ const { isPasswordValid } = require('../middlewares/isPasswordValid')
 
 const router = express.Router()
 
-//router.get('/', function(req, res, next) {
-//    res.render('register', { title: 'Express' })
-//})
+router.get('/', function(req, res, next) {
+    res.render('register', { title: 'Express' })
+})
 
 //views register 
 

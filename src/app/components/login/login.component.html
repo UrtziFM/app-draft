@@ -1,0 +1,9 @@
+<div class="head">
+<div class="card">
+<form [formGroup]="SignIn" (ngSubmit)="login(SignIn.value)">
+  <input formControlName="email" type="email" placeholder="Your User Name" />
+  <input formControlName="password" type="password" placeholder="Your Password" />
+  <button [disabled]='loading' class="btn"></button> 
+</form>
+</div>
+</div>
