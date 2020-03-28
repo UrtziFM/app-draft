@@ -41,7 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/forms', formRoute)
 
 // Create port
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 30467;
 const server = app.listen(port, () => {
   console.log('Connected to port ' + port)
 })
