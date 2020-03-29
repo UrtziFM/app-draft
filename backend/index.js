@@ -44,7 +44,7 @@ app.get('/', function(req, res){
 app.use('/forms', formRoute)
 
 // Create port
-const port = process.env.PORT || 30467;
+const port = process.env.PORT ;
 const server = app.listen(port, () => {
   console.log('Connected to port ' + port)
 })
